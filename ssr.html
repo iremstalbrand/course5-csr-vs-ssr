@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Simple Blog</title>
+    <title>Server Side Rendering</title>
   </head>
   <body>
     <header>
-      <p class="logo">THE.BLOG</p>
+      <div class="logo-container">
+        <img src="logo.svg" alt="Logo" />
+        <p class="logo-text">THE.BLOG</p>
+      </div>
     </header>
 
-    <section><h1>LATEST ARTICLES</h1></section>
+    <h1>LATEST ARTICLES</h1>
 
     <nav class="category-filter">
       <ul>
@@ -81,8 +84,11 @@
       </div>
     </article>
     <footer>
-      <p>© 2026 The.Blog</p>
-      <button>See all articles</button>
+      <div class="render-badge-ssr">
+        <div class="badge-dot"></div>
+        Server-Side Rendered
+      </div>
+      <a href="csr.html" class="switch-link">View CSR version →</a>
     </footer>
   </body>
 </html>
