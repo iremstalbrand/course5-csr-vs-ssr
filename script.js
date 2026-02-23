@@ -1,6 +1,7 @@
 const app = document.getElementById("app");
 
 // ============ HEADER ============
+
 const header = document.createElement("header");
 const logoContainer = document.createElement("div");
 logoContainer.classList.add("logo-container");
@@ -11,6 +12,8 @@ img.src = "logo.svg";
 const logoText = document.createElement("p");
 logoText.classList.add("logo-text");
 logoText.textContent = "THE.BLOG";
+img.alt = "Mini Blog";
+
 logoContainer.appendChild(img);
 logoContainer.appendChild(logoText);
 header.appendChild(logoContainer);
@@ -21,6 +24,7 @@ app.appendChild(header);
 const section = document.createElement("section");
 const sectionTitle = document.createElement("h1");
 sectionTitle.textContent = "LATEST ARTICLES";
+
 section.appendChild(sectionTitle);
 app.appendChild(section);
 
@@ -31,7 +35,6 @@ const listElements = ["All", "Technology", "Design", "Culture", "Business"];
 const nav = document.createElement("nav");
 const ul = document.createElement("ul");
 nav.appendChild(ul);
-
 nav.classList.add("category-filter");
 listElements.forEach((item) => {
   const li = document.createElement("li");
@@ -44,7 +47,9 @@ listElements.forEach((item) => {
   li.appendChild(span);
   ul.appendChild(li);
 });
+
 app.appendChild(nav);
+
 // ============ ARTICLE ============
 
 const cards = [
@@ -108,10 +113,12 @@ cards.forEach((item) => {
   card.appendChild(cardFooter);
   articleContainer.appendChild(card);
 });
+
 article.appendChild(articleContainer);
 app.appendChild(article);
 
 // ============ FOOTER ============
+
 const footer = document.createElement("footer");
 const footerContainer = document.createElement("div");
 footerContainer.classList.add("render-badge");
