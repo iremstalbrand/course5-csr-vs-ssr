@@ -1,6 +1,7 @@
-// ============ HEADER ============
+const app = document.getElementById("app");
 
-const header = document.querySelector("header");
+// ============ HEADER ============
+const header = document.createElement("header");
 const logoContainer = document.createElement("div");
 logoContainer.classList.add("logo-container");
 
@@ -13,20 +14,24 @@ logoText.textContent = "THE.BLOG";
 logoContainer.appendChild(img);
 logoContainer.appendChild(logoText);
 header.appendChild(logoContainer);
+app.appendChild(header);
 
 // ============ H1 SECTION ============
 
-const section = document.querySelector("section");
+const section = document.createElement("section");
 const sectionTitle = document.createElement("h1");
 sectionTitle.textContent = "LATEST ARTICLES";
 section.appendChild(sectionTitle);
+app.appendChild(section);
 
 // ============ NAV ============
 
 const listElements = ["All", "Technology", "Design", "Culture", "Business"];
-const nav = document.querySelector("nav");
+
+const nav = document.createElement("nav");
 const ul = document.createElement("ul");
 nav.appendChild(ul);
+
 nav.classList.add("category-filter");
 listElements.forEach((item) => {
   const li = document.createElement("li");
@@ -39,7 +44,7 @@ listElements.forEach((item) => {
   li.appendChild(span);
   ul.appendChild(li);
 });
-
+app.appendChild(nav);
 // ============ ARTICLE ============
 
 const cards = [
@@ -61,7 +66,7 @@ const cards = [
     category: "CULTURE",
     title: "Alone, but Connected",
     content:
-      "   Even in a crowd, quiet moments like reading or listening to music can create a small sense of connection and reflection.",
+      "Even in a crowd, quiet moments like reading or listening to music can create a small sense of connection and reflection.",
     date: "Feb 5, 2026",
   },
   {
@@ -73,7 +78,7 @@ const cards = [
   },
 ];
 
-const article = document.querySelector("article");
+const article = document.createElement("article");
 const articleContainer = document.createElement("div");
 articleContainer.classList.add("cards-container");
 
@@ -104,25 +109,23 @@ cards.forEach((item) => {
   articleContainer.appendChild(card);
 });
 article.appendChild(articleContainer);
+app.appendChild(article);
 
 // ============ FOOTER ============
-const footer = document.querySelector("footer");
-
+const footer = document.createElement("footer");
 const footerContainer = document.createElement("div");
-footerContainer.classList.add("render-badge-ssr");
-
+footerContainer.classList.add("render-badge");
 const badge = document.createElement("div");
 badge.classList.add("badge-dot");
-
-const badgeText = document.createElement("span");
-badgeText.textContent = "Client-Side Rendered";
-
+const footerText = document.createElement("span");
+footerText.textContent = "Client Side Rendering";
 const link = document.createElement("a");
 link.href = "ssr.html";
-link.classList.add("switch-link");
 link.textContent = "View SSR version →";
+link.classList.add("switch-link");
 
 footerContainer.appendChild(badge);
-footerContainer.appendChild(badgeText);
+footerContainer.appendChild(footerText);
 footer.appendChild(footerContainer);
 footer.appendChild(link);
+app.appendChild(footer);
