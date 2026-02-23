@@ -3,14 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --color-bg: #eeeae4;
   --color-card-bg: #f5f2ed;
-  --color-text: #1a1a1a;
-  --color-accent: #8b0000;
-  --color-border: #c8c4bc;
-  --color-muted: #7a7570;
+  --color-text: #111111;      
+  --color-accent: #7a0000;   
+  --color-border: #b5b1aa;   
+  --color-muted: #4f4b46;    
 }
 
 #app {
