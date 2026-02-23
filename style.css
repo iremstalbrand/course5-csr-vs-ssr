@@ -13,6 +13,10 @@
   --color-muted: #7a7570;
 }
 
+#app {
+  min-height: 100vh;
+}
+
 body {
   min-height: 100vh;
   font-size: 1rem;
@@ -147,7 +151,7 @@ footer {
   top: 100vh;
 }
 
-.render-badge-ssr {
+.render-badge {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -197,6 +201,7 @@ footer {
 
   footer {
     padding: 1.5rem;
+    font-size: 0.8rem;
   }
 }
 
