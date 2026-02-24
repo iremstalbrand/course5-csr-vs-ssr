@@ -7,8 +7,8 @@ Comparison of Client-Side Rendering (CSR) and Server-Side Rendering (SSR) by bui
 **Loading Speed:**
 Since the project is small, both pages load quickly under normal conditions. But when I tested with a simulated Slow 3G connection, the difference became clearer.
 
-- In SSR, as soon as the HTML finishes loading, the content is already visible on the screen. There's no blank page.
-- In CSR, the initial HTML loads a bit faster because it's almost empty, but the screen stays completely blank until the JavaScript file finishes downloading and running.
+In SSR, as soon as the HTML finishes loading, the content is already visible on the screen. There's no blank page.
+In CSR, the initial HTML loads a bit faster because it's almost empty, but the screen stays completely blank until the JavaScript file finishes downloading and running.
 
 **JS Impact:**
 With SSR, the browser just reads the HTML and shows the page without needing JavaScript at all. With CSR, it has to wait for the JavaScript, run all that code, and build the whole page from scratch.
