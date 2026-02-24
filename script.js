@@ -125,7 +125,7 @@ footerContainer.classList.add("render-badge");
 const badge = document.createElement("div");
 badge.classList.add("badge-dot");
 const footerText = document.createElement("span");
-footerText.textContent = "Client Side Rendering";
+footerText.textContent = "Client Side Rendered";
 const link = document.createElement("a");
 link.href = "ssr.html";
 link.textContent = "View SSR version →";
